@@ -10,7 +10,7 @@
 ##### Явор Комитов [[telerik]](http://telerikacademy.com/Users/ykomitov) [[github]](https://github.com/ykomitov)
 
 
-Web Services and Cloud Technologies � Practical Teamwork Project 2015
+Web Services and Cloud Technologies – Practical Teamwork Project 2015
 =====================================================================
 
 Project Description
