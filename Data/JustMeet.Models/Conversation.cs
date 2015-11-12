@@ -1,6 +1,7 @@
 ﻿namespace JustMeet.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
 
     public class Conversation
     {
@@ -8,6 +9,8 @@
 
         public string Topic { get; set; }
 
+        [Required]
+        [MaxLength(300)]
         public string Text { get; set; }
 
         public DateTime StartedOn { get; set; }

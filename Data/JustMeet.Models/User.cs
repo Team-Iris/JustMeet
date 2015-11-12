@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
     public class User
     {
@@ -18,14 +17,24 @@
 
         public int Id { get; set; }
 
+        [Required]
+        [MinLength(3)]
+        [MaxLength(25)]
         public string FirstName { get; set; }
 
+        [MinLength(3)]
+        [MaxLength(25)]
         public string LastName { get; set; }
 
+        [Required]
+        [MinLength(3)]
+        [MaxLength(25)]
         public string Username { get; set; }
 
+        [Required]
         public DateTime DateOfBirth { get; set; }
 
+        [Required]
         public bool IsMale { get; set; }
 
         public string Description { get; set; }

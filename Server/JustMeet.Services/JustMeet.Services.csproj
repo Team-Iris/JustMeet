@@ -196,7 +196,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\JustMeet.Data\JustMeet.Data.csproj">
+      <Project>{9b582275-91ba-484f-9d14-b40849152308}</Project>
+      <Name>JustMeet.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\JustMeet.Models\JustMeet.Models.csproj">
+      <Project>{3e9c4ea0-1b0b-41ef-bd1d-43dcce9e52cb}</Project>
+      <Name>JustMeet.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
