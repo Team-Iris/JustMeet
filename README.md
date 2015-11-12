@@ -76,7 +76,7 @@ Put the following in a **ZIP archive** and submit it (each team member submits t
 
 -   Brief **documentation** in Markdown (`.md` file). It should provide the following information (in brief):
     -   Team name and list of team members
-    -   Project purpose � what problem do you solve?
+    -   Project purpose – what problem do you solve?
     -   Class diagram of your types
 	-	The list and explanation of **your API methods**
     -   The URL of your source control repository
