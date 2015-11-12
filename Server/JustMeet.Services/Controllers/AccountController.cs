@@ -8,23 +8,23 @@
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Http;
-    using System.Web.Http.ModelBinding;
+    using JustMeet.Models;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
     using Microsoft.Owin.Security.Cookies;
     using Microsoft.Owin.Security.OAuth;
-    using JustMeet.Services.Models;
-    using JustMeet.Services.Providers;
-    using JustMeet.Services.Results;
+    using Models;
+    using Providers;
+    using Results;
 
     [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";
-        private ApplicationUserManager _userManager;
+        private ApplicationUserManager userManager;
 
         public AccountController()
         {
@@ -42,16 +42,21 @@
         {
             get
             {
-                return this._userManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                return this.userManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
 
             private set
             {
-                this._userManager = value;
+                this.userManager = value;
             }
         }
 
         public ISecureDataFormat<AuthenticationTicket> AccessTokenFormat { get; private set; }
+
+        private IAuthenticationManager Authentication
+        {
+            get { return Request.GetOwinContext().Authentication; }
+        }
 
         // GET api/Account/UserInfo
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
@@ -129,7 +134,7 @@
                 User.Identity.GetUserId(),
                 model.OldPassword,
                 model.NewPassword);
-            
+
             if (!result.Succeeded)
             {
                 return this.GetErrorResult(result);
@@ -256,7 +261,7 @@
                 return new ChallengeResult(provider, this);
             }
 
-            ApplicationUser user = await this.UserManager.FindAsync(new UserLoginInfo(
+            User user = await this.UserManager.FindAsync(new UserLoginInfo(
                 externalLogin.LoginProvider,
                 externalLogin.ProviderKey));
 
@@ -265,10 +270,10 @@
             if (hasRegistered)
             {
                 this.Authentication.SignOut(DefaultAuthenticationTypes.ExternalCookie);
-                
-                 ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(
-                     this.UserManager,
-                    OAuthDefaults.AuthenticationType);
+
+                ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(
+                    this.UserManager,
+                   OAuthDefaults.AuthenticationType);
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(
                     this.UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
@@ -298,8 +303,8 @@
 
             if (generateState)
             {
-                const int strengthInBits = 256;
-                state = RandomOAuthStateGenerator.Generate(strengthInBits);
+                const int StrengthInBits = 256;
+                state = RandomOAuthStateGenerator.Generate(StrengthInBits);
             }
             else
             {
@@ -313,7 +318,8 @@
                     Name = description.Caption,
                     Url = Url.Route(
                     "ExternalLogin",
-                    new {
+                    new
+                    {
                         provider = description.AuthenticationType,
                         response_type = "token",
                         client_id = Startup.PublicClientId,
@@ -338,7 +344,7 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new User() { UserName = model.Email, Email = model.Email };
 
             IdentityResult result = await this.UserManager.CreateAsync(user, model.Password);
 
@@ -367,7 +373,7 @@
                 return this.InternalServerError();
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new User() { UserName = model.Email, Email = model.Email };
 
             IdentityResult result = await this.UserManager.CreateAsync(user);
             if (!result.Succeeded)
@@ -379,7 +385,7 @@
 
             if (!result.Succeeded)
             {
-                return this.GetErrorResult(result); 
+                return this.GetErrorResult(result);
             }
 
             return this.Ok();
@@ -387,21 +393,16 @@
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && this._userManager != null)
+            if (disposing && this.userManager != null)
             {
-                this._userManager.Dispose();
-                this._userManager = null;
+                this.userManager.Dispose();
+                this.userManager = null;
             }
 
             base.Dispose(disposing);
         }
 
         #region Helpers
-
-        private IAuthenticationManager Authentication
-        {
-            get { return Request.GetOwinContext().Authentication; }
-        }
 
         private IHttpActionResult GetErrorResult(IdentityResult result)
         {
@@ -432,6 +433,27 @@
             return null;
         }
 
+        private static class RandomOAuthStateGenerator
+        {
+            private static RandomNumberGenerator random = new RNGCryptoServiceProvider();
+
+            public static string Generate(int strengthInBits)
+            {
+                const int BitsPerByte = 8;
+
+                if (strengthInBits % BitsPerByte != 0)
+                {
+                    throw new ArgumentException("strengthInBits must be evenly divisible by 8.", "strengthInBits");
+                }
+
+                int strengthInBytes = strengthInBits / BitsPerByte;
+
+                byte[] data = new byte[strengthInBytes];
+                random.GetBytes(data);
+                return HttpServerUtility.UrlTokenEncode(data);
+            }
+        }
+
         private class ExternalLoginData
         {
             public string LoginProvider { get; set; }
@@ -439,19 +461,6 @@
             public string ProviderKey { get; set; }
 
             public string UserName { get; set; }
-
-            public IList<Claim> GetClaims()
-            {
-                IList<Claim> claims = new List<Claim>();
-                claims.Add(new Claim(ClaimTypes.NameIdentifier, this.ProviderKey, null, this.LoginProvider));
-
-                if (this.UserName != null)
-                {
-                    claims.Add(new Claim(ClaimTypes.Name, this.UserName, null, this.LoginProvider));
-                }
-
-                return claims;
-            }
 
             public static ExternalLoginData FromIdentity(ClaimsIdentity identity)
             {
@@ -480,29 +489,20 @@
                     UserName = identity.FindFirstValue(ClaimTypes.Name)
                 };
             }
-        }
 
-        private static class RandomOAuthStateGenerator
-        {
-            private static RandomNumberGenerator _random = new RNGCryptoServiceProvider();
-
-            public static string Generate(int strengthInBits)
+            public IList<Claim> GetClaims()
             {
-                const int bitsPerByte = 8;
+                IList<Claim> claims = new List<Claim>();
+                claims.Add(new Claim(ClaimTypes.NameIdentifier, this.ProviderKey, null, this.LoginProvider));
 
-                if (strengthInBits % bitsPerByte != 0)
+                if (this.UserName != null)
                 {
-                    throw new ArgumentException("strengthInBits must be evenly divisible by 8.", "strengthInBits");
+                    claims.Add(new Claim(ClaimTypes.Name, this.UserName, null, this.LoginProvider));
                 }
 
-                int strengthInBytes = strengthInBits / bitsPerByte;
-
-                byte[] data = new byte[strengthInBytes];
-                _random.GetBytes(data);
-                return HttpServerUtility.UrlTokenEncode(data);
+                return claims;
             }
         }
-
         #endregion
     }
 }

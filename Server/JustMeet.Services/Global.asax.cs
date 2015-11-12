@@ -1,13 +1,13 @@
 ﻿namespace JustMeet.Services
 {
+    using System.Web;
     using System.Web.Http;
-    using System.Web.Mvc;
 
-    public class WebApiApplication : System.Web.HttpApplication
+    public class WebApiApplication : HttpApplication
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            DatabaseConfig.Initialize();
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

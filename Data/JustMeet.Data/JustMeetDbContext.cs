@@ -1,22 +1,27 @@
 ﻿namespace JustMeet.Data
 {
     using System.Data.Entity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Models;
 
-    using JustMeet.Models;
-
-    public class JustMeetDbContext : DbContext
+    public class JustMeetDbContext : IdentityDbContext<User>
     {
         public JustMeetDbContext()
         : base("JustMeet")
         {
         }
 
-        public virtual IDbSet<User> Users { get; set; }
+        ////public virtual IDbSet<User> Users { get; set; }
 
         public virtual IDbSet<Conversation> Conversations { get; set; }
 
         public virtual IDbSet<Friendship> Friendships { get; set; }
 
         public virtual IDbSet<Image> Images { get; set; }
+
+        public static JustMeetDbContext Create()
+        {
+            return new JustMeetDbContext();
+        }
     }
 }
