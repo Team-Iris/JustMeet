@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustMeet.Data", "Data\JustM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustMeet.Services", "Server\JustMeet.Services\JustMeet.Services.csproj", "{53A16772-D466-4FC3-91FF-0BFCBB6572D7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{EC2A2D7F-0446-40A4-89EB-A482CA980AFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustMeet.Web", "Client\JustMeet.Web\JustMeet.Web.csproj", "{FA58706B-68B8-47D6-87A0-64BF604AF386}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{53A16772-D466-4FC3-91FF-0BFCBB6572D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53A16772-D466-4FC3-91FF-0BFCBB6572D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53A16772-D466-4FC3-91FF-0BFCBB6572D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA58706B-68B8-47D6-87A0-64BF604AF386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA58706B-68B8-47D6-87A0-64BF604AF386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA58706B-68B8-47D6-87A0-64BF604AF386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA58706B-68B8-47D6-87A0-64BF604AF386}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +47,6 @@ Global
 		{3E9C4EA0-1B0B-41EF-BD1D-43DCCE9E52CB} = {8AE1DB69-0E9E-4FDC-8B5D-8CB7C84D7BE1}
 		{9B582275-91BA-484F-9D14-B40849152308} = {8AE1DB69-0E9E-4FDC-8B5D-8CB7C84D7BE1}
 		{53A16772-D466-4FC3-91FF-0BFCBB6572D7} = {6DF93E76-987C-4C8A-9AF4-7C6F5E573E5D}
+		{FA58706B-68B8-47D6-87A0-64BF604AF386} = {EC2A2D7F-0446-40A4-89EB-A482CA980AFB}
 	EndGlobalSection
 EndGlobal
