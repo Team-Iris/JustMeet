@@ -18,8 +18,10 @@
     using Models.Account;
     using Providers;
     using Results;
+    using System.Web.Http.Cors;
 
     [Authorize]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {

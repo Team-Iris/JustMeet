@@ -14,8 +14,7 @@
         this.get('/#/logout', function () {
         });
 
-        this.get('/#/register', function () {
-        });
+        this.get('/#/register', userController.register);
     });
 
     $(function () {
