@@ -1,6 +1,7 @@
 ﻿namespace JustMeet.Services
 {
     using Data;
+    using JustMeet.Data;
     using JustMeet.Models;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;

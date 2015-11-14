@@ -1,8 +1,8 @@
 ﻿namespace JustMeet.Services
 {
     using System.Data.Entity;
-    using Data;
-    using Data.Migrations;
+    using JustMeet.Data;
+    using JustMeet.Data.Migrations;
 
     public static class DatabaseConfig
     {

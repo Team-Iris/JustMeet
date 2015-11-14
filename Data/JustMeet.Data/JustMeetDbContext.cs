@@ -4,7 +4,7 @@
     using Microsoft.AspNet.Identity.EntityFramework;
     using Models;
 
-    public class JustMeetDbContext : IdentityDbContext<User>
+    public class JustMeetDbContext : IdentityDbContext<User>, IJustMeetDbContext
     {
         public JustMeetDbContext() : base("JustMeet")
         {

@@ -1,7 +1,7 @@
 ﻿namespace JustMeet.Services
 {
     using System;
-    using Data;
+    using JustMeet.Data;
     using Microsoft.AspNet.Identity;
     using Microsoft.Owin;
     using Microsoft.Owin.Security.Cookies;
