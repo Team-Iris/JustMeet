@@ -1,5 +1,6 @@
 ﻿namespace JustMeet.Services.Models.Account
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
 
     public class RegisterBindingModel
@@ -18,5 +19,15 @@
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [StringLength(25, MinimumLength = 3, ErrorMessage = "First name should be between 3 and 25 characters long!")]
+        public string FirstName { get; set; }
+
+        [StringLength(25, MinimumLength = 3, ErrorMessage = "Last name should be between 3 and 25 characters long!")]
+        public string LastName { get; set; }
+
+        public bool IsMale { get; set; }
+
+        public DateTime DateOfBirth { get; set; }
     }
 }

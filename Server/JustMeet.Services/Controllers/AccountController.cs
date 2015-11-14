@@ -346,7 +346,15 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var user = new User() { UserName = model.Email, Email = model.Email };
+            var user = new User()
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                DateOfBirth = model.DateOfBirth,
+                IsMale = model.IsMale
+            };
 
             IdentityResult result = await this.UserManager.CreateAsync(user, model.Password);
 

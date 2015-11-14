@@ -6,12 +6,9 @@
 
     public class JustMeetDbContext : IdentityDbContext<User>
     {
-        public JustMeetDbContext()
-        : base("JustMeet")
+        public JustMeetDbContext() : base("JustMeet")
         {
         }
-
-        ////public virtual IDbSet<User> Users { get; set; }
 
         public virtual IDbSet<Conversation> Conversations { get; set; }
 

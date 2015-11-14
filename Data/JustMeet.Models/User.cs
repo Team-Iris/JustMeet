@@ -19,8 +19,6 @@
             this.conversations = new HashSet<Conversation>();
         }
 
-        ////public int Id { get; set; }
-
         [Required]
         [MinLength(3)]
         [MaxLength(25)]
@@ -29,11 +27,6 @@
         [MinLength(3)]
         [MaxLength(25)]
         public string LastName { get; set; }
-
-        ////[Required]
-        ////[MinLength(3)]
-        ////[MaxLength(25)]
-        ////public string Username { get; set; }
 
         [Required]
         public DateTime DateOfBirth { get; set; }
@@ -45,7 +38,7 @@
 
         public bool IsOnline { get; set; }
 
-        public DateTime LastOnline { get; set; }
+        public DateTime? LastOnline { get; set; }
 
         public virtual ICollection<Image> Images
         {
