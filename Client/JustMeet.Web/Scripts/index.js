@@ -8,8 +8,7 @@
 
         });
 
-        this.get('/#/login', function () {
-        });
+        this.get('/#/login', userController.login);
 
         this.get('/#/logout', function () {
         });

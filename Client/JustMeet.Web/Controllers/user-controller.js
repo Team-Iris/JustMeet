@@ -1,32 +1,62 @@
 ﻿var userController = (function () {
-    function Register() {
+    function register() {
         templates
             .get('register')
             .then(function (data) {
                 $('#main-container').html(data);
                 $('#register-btn').on('click', function () {
-                    RegisterUser();
+                    registerUser();
+                });
+
+                $(function () {
+                    $("#birthdate").datepicker();
                 });
             });
-
-
     }
 
-    function RegisterUser() {
+    function registerUser() {
         var username = $('#username').val();
         var password = $('#password').val();
         var passConfirm = $('#pass-confirm').val();
-        
-        data.register(username, password, passConfirm);
+        var firstName = $('#firstname').val();
+        var lastName = $('#lastname').val();
+        var dateofbirth = $('#birthdate').val();
+        var isMale = $('#is-male-radio').is(':checked');
+
+        var user = {
+            email: username,
+            password: password,
+            confirmPassword: passConfirm,
+            firstName: firstName,
+            lastName: lastName,
+            dateofbirth: dateofbirth,
+            isMale: isMale
+        }
+
+        data.register(user);
     }
 
-    function Login() {
+    function login() {
+        templates
+            .get('login')
+            .then(function (data) {
+                $('#main-container').html(data);
+                $('#login-btn').on('click', function () {
+                    loginUser();
+                })
+            })
+    }
 
+    function loginUser() {
+        var username = $('#username').val();
+        var password = $('#password').val();
+
+        data.login(username, password);
     }
 
     var userController = {
-        register: Register,
-        login: Login
+        register: register,
+        login: login
     };
 
     return userController;
