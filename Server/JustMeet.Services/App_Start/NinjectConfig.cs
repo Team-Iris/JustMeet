@@ -10,6 +10,7 @@ namespace JustMeet.Services.App_Start
     using Ninject;
     using Ninject.Extensions.Conventions;
     using Ninject.Web.Common;
+    using Common.Constants;
 
     public static class NinjectConfig 
     {
@@ -69,7 +70,7 @@ namespace JustMeet.Services.App_Start
                 .InRequestScope(); // in each request ninject will provide just one context
 
             kernel
-                .Bind(b => b.From("JustMeet.Services.Data") // TODO: Extract constant
+                .Bind(b => b.From(Assemblies.DataServices)
                 .SelectAllClasses()
                 .BindDefaultInterface());
         }        

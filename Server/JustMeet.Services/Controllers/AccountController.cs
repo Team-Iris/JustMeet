@@ -8,6 +8,8 @@
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Http;
+    using System.Web.Http.Cors;
+
     using JustMeet.Models;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
@@ -18,7 +20,6 @@
     using Models.Account;
     using Providers;
     using Results;
-    using System.Web.Http.Cors;
 
     [Authorize]
     [EnableCors(origins: "*", headers: "*", methods: "*")]

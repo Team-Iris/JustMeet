@@ -6,7 +6,8 @@
 
     public class JustMeetDbContext : IdentityDbContext<User>, IJustMeetDbContext
     {
-        public JustMeetDbContext() : base("JustMeet")
+        public JustMeetDbContext() 
+            : base("JustMeet")
         {
         }
 

@@ -3,7 +3,9 @@
     using System.Linq;
     using System.Web.Http;
     using System.Web.Http.Cors;
+
     using AutoMapper.QueryableExtensions;
+    using Common.Constants;
     using Data.Contracts;
     using Models.User;
 
@@ -60,7 +62,7 @@
 
         [Authorize]
         [Route("api/users/all")]
-        public IHttpActionResult Get(int page = 1, int pageSize = 3)
+        public IHttpActionResult Get(int page = UsersConstants.Page, int pageSize = UsersConstants.PageSize)
         {
             var result = this.users
                 .All(page, pageSize)
@@ -72,7 +74,7 @@
 
         [Authorize]
         [Route("api/users/search")]
-        public IHttpActionResult Get(bool sex, int ageStart = 18, int ageEnd = 100) //TODO: constants
+        public IHttpActionResult Get(bool sex, int ageStart = UsersConstants.AgeStart, int ageEnd = UsersConstants.AgeEnd)
         {
             var result = this.users
                 .BySexAndAge(sex, ageStart, ageEnd)

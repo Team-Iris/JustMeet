@@ -5,6 +5,7 @@
     using Contracts;
     using JustMeet.Data;
     using Models;
+    using Common.Constants;
 
     public class UsersService : IUsersService
     {
@@ -22,7 +23,7 @@
                  .OrderByDescending(p => p.DateOfBirth);
         }
 
-        public IQueryable<User> All(int page = 1, int pageSize = 3)
+        public IQueryable<User> All(int page = UsersConstants.Page, int pageSize = UsersConstants.PageSize)
         {
             return this.users
                  .All()
@@ -31,7 +32,7 @@
                  .Take(pageSize);
         }
 
-        public IQueryable<User> BySexAndAge(bool sex, int ageStart = 18, int ageEnd = 100) // TODO: Constants
+        public IQueryable<User> BySexAndAge(bool sex, int ageStart = UsersConstants.AgeStart, int ageEnd = UsersConstants.AgeEnd)
         {
             return this.users
                  .All()
