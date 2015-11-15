@@ -62,6 +62,10 @@
     <Compile Include="UsersService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\JustMeet.Common\JustMeet.Common.csproj">
+      <Project>{a8f6ad52-2470-44e3-9a7f-71e6fb2263a6}</Project>
+      <Name>JustMeet.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\JustMeet.Data\JustMeet.Data.csproj">
       <Project>{9b582275-91ba-484f-9d14-b40849152308}</Project>
       <Name>JustMeet.Data</Name>
