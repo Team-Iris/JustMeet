@@ -1,5 +1,6 @@
 ﻿namespace JustMeet.Services.Data.Contracts
 {
+    using System;
     using System.Linq;
     using Models;
 
@@ -12,5 +13,9 @@
         IQueryable<User> BySexAndAge(bool sex, int ageStart = 18, int ageEnd = 100);
 
         IQueryable<User> Select(string email);
+
+        string Update(string username, string firstName, string lastName, DateTime birthday, bool isMale, string description);
+
+        string Delete(string username);
     }
 }

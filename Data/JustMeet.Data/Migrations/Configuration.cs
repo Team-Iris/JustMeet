@@ -1,12 +1,10 @@
 namespace JustMeet.Data.Migrations
 {
     using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
-    using JustMeet.Models;
+    using Models;
 
-    public sealed class Configuration : DbMigrationsConfiguration<JustMeet.Data.JustMeetDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<JustMeetDbContext>
     {
         public Configuration()
         {
@@ -14,7 +12,7 @@ namespace JustMeet.Data.Migrations
             this.AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(JustMeet.Data.JustMeetDbContext context)
+        protected override void Seed(JustMeetDbContext context)
         {
             ////  This method will be called after migrating to the latest version.
 
@@ -29,7 +27,7 @@ namespace JustMeet.Data.Migrations
             ////    );
             ////
             context.Users.AddOrUpdate(
-                u => u.FirstName, new User
+                u => u.Email, new User
                 {
                     FirstName = "Pesho",
                     LastName = "Peshev",

@@ -7,6 +7,7 @@
     using Data.Contracts;
     using Models.User;
 
+    [EnableCors("*", "*", "*")]
     public class UsersController : ApiController
     {
         private readonly IUsersService users;
@@ -16,13 +17,43 @@
             this.users = usersService;
         }
 
-        [EnableCors("*", "*", "*")]
+        [Authorize]
+        [Route("api/users/profile")]
         public IHttpActionResult Get()
         {
+            var currentUser = this.User.Identity.Name;
+
             var result = this.users
-                .All()
+                .Select(currentUser)
                 .ProjectTo<UserDetailsResponseModel>()
-                .ToList();
+                .FirstOrDefault();
+
+            return this.Ok(result);
+        }
+
+        [Authorize]
+        [Route("api/users/profile")]
+        public IHttpActionResult Post(UserUpdateRequestModel model)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.BadRequest(this.ModelState);
+            }
+
+            var currentUser = this.User.Identity.Name;
+
+            var updatedProfileId = this.users.Update(currentUser, model.FirstName, model.LastName, model.DateOfBirth, model.IsMale, model.Description);
+
+            return this.Ok(updatedProfileId);
+        }
+
+        [Authorize]
+        [Route("api/users/profile")]
+        public IHttpActionResult Delete()
+        {
+            var currentUser = this.User.Identity.Name;
+
+            var result = this.users.Delete(currentUser);
 
             return this.Ok(result);
         }
@@ -47,18 +78,6 @@
                 .BySexAndAge(sex, ageStart, ageEnd)
                 .ProjectTo<UserDetailsResponseModel>()
                 .ToList();
-
-            return this.Ok(result);
-        }
-
-        [Authorize]
-        [Route("api/users/profile")]
-        public IHttpActionResult Get(string email) //TODO: constants
-        {
-            var result = this.users
-                .Select(email)
-                .ProjectTo<UserDetailsResponseModel>()
-                .FirstOrDefault();
 
             return this.Ok(result);
         }

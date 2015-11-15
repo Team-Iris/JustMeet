@@ -6,6 +6,8 @@
 
     public interface IJustMeetDbContext
     {
+        IDbSet<User> Users { get; set; }
+
         IDbSet<Conversation> Conversations { get; set; }
 
         IDbSet<Friendship> Friendships { get; set; }
