@@ -7,45 +7,10 @@
     background-color: #1a1a1a;
     border: 0;
     border-radius: 0;
-    height: 80px;
+    height: 80px
 }
 
 .navbar #navbar-logo img {
     height: 80px;
     margin-top: -8%;
 }
-
-/*.box {
-    width: 100%;
-    height: 330px;
-    border-radius: .5em;
-}
-
-.slider {
-    width: 100%;
-    overflow: hidden;
-    display: inline-block;
-    transform: skewX(-20deg);
-    transition: width 1.2s ease-in-out;
-    margin-left: -76px;
-   pointer-events: none;
-}
-
-.sunrise {
-    position: absolute;
-    background: url('../Images/perfect-relationship.jpg') no-repeat;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
-}
-
-.sunset {
-    transform: skewX(20deg);
-    background-image: url('../Images/635634260119329904-1287501582_boyfriend-cheats.imgopt1000x70.jpg');
-}
-
-.slider:hover {
-    width: 760px;
-}
-        
-.sunrise:hover + .slider { 
-    width: 250px;
-}*/

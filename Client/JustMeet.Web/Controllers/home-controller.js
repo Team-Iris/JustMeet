@@ -1,5 +1,6 @@
 ﻿var homeController = (function () {
     function all(context) {
+        $('#main-container').html('');
         userController.setUserPanel();
     }
 
