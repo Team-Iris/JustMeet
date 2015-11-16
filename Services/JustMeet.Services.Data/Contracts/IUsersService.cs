@@ -2,8 +2,8 @@
 {
     using System;
     using System.Linq;
-    using Models;
     using Common.Constants;
+    using Models;
 
     public interface IUsersService
     {
@@ -18,5 +18,7 @@
         string Update(string username, string firstName, string lastName, DateTime birthday, bool isMale, string description);
 
         string Delete(string username);
+
+        User FindUserById(string id);
     }
 }

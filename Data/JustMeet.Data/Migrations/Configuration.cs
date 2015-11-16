@@ -27,7 +27,8 @@ namespace JustMeet.Data.Migrations
             ////    );
             ////
             context.Users.AddOrUpdate(
-                u => u.Email, new User
+                u => u.Email,
+                new User
                 {
                     FirstName = "Pesho",
                     LastName = "Peshev",
@@ -156,8 +157,7 @@ namespace JustMeet.Data.Migrations
                     Email = "linka@linka.com",
                     PasswordHash = "APrEJA5givNTsrcVR/0k/Hcvc6axh9VwTN7IVkE/HFsVCILo7Z4ue0vzbF7H/V5mhA==",
                     SecurityStamp = "8771ec8e-a3c8-4504-8e2e-966c023dbeb7"
-                }
-            );
+                });
         }
     }
 }

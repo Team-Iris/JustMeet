@@ -2,10 +2,10 @@
 {
     using System;
     using System.Linq;
+    using Common.Constants;
     using Contracts;
     using JustMeet.Data;
     using Models;
-    using Common.Constants;
 
     public class UsersService : IUsersService
     {
@@ -42,19 +42,16 @@
                     (DateTime.Now.Year - u.DateOfBirth.Year) < ageEnd);
         }
 
-        public IQueryable<User> Select(string email)
+        public IQueryable<User> Select(string id)
         {
             return this.users
                  .All()
-                 .Where(u => u.Email == email);
+                 .Where(u => u.Id == id);
         }
 
-        public string Update(string username, string firstName, string lastName, DateTime birthday, bool isMale, string description)
+        public string Update(string userId, string firstName, string lastName, DateTime birthday, bool isMale, string description)
         {
-            var currentUser = this.users
-                                        .All()
-                                        .Where(u => u.Email == username)
-                                        .FirstOrDefault();
+            var currentUser = this.users.GetById(userId);
 
             currentUser.FirstName = firstName;
             currentUser.DateOfBirth = birthday;
@@ -72,21 +69,20 @@
 
             this.users.SaveChanges();
 
-            return string.Format("User {0} updated successfully!", username);
+            return string.Format("User {0} updated successfully!", currentUser.UserName);
         }
 
-
-        public string Delete(string username)
+        public string Delete(string id)
         {
-            var userToDelete = this.users
-                                       .All()
-                                       .Where(u => u.Email == username)
-                                       .FirstOrDefault();
-
-            this.users.Delete(userToDelete);
+            this.users.Delete(id);
             this.users.SaveChanges();
 
             return string.Format("User deleted successfully!");
+        }
+
+        public User FindUserById(string id)
+        {
+            return this.users.GetById(id);
         }
     }
 }

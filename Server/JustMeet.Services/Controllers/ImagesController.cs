@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace JustMeet.Services.Controllers
+﻿namespace JustMeet.Services.Controllers
 {
-    public class ImagesController
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.Http;
+    using System.Web.Http.Cors;
+
+    [EnableCors("*", "*", "*")]
+    public class ImagesController : ApiController
     {
     }
 }

@@ -3,10 +3,10 @@
     using System.Linq;
     using System.Web.Http;
     using System.Web.Http.Cors;
-
     using AutoMapper.QueryableExtensions;
     using Common.Constants;
     using Data.Contracts;
+    using Microsoft.AspNet.Identity;
     using Models.User;
 
     [EnableCors("*", "*", "*")]
@@ -23,10 +23,15 @@
         [Route("api/users/profile")]
         public IHttpActionResult Get()
         {
-            var currentUser = this.User.Identity.Name;
+            var currentUserId = this.User.Identity.GetUserId();
+
+            if (this.users.FindUserById(currentUserId) == null)
+            {
+                return this.NotFound();
+            }
 
             var result = this.users
-                .Select(currentUser)
+                .Select(currentUserId)
                 .ProjectTo<UserDetailsResponseModel>()
                 .FirstOrDefault();
 
@@ -42,9 +47,9 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var currentUser = this.User.Identity.Name;
+            var currentUserId = this.User.Identity.GetUserId();
 
-            var updatedProfileId = this.users.Update(currentUser, model.FirstName, model.LastName, model.DateOfBirth, model.IsMale, model.Description);
+            var updatedProfileId = this.users.Update(currentUserId, model.FirstName, model.LastName, model.DateOfBirth, model.IsMale, model.Description);
 
             return this.Ok(updatedProfileId);
         }
@@ -53,9 +58,14 @@
         [Route("api/users/profile")]
         public IHttpActionResult Delete()
         {
-            var currentUser = this.User.Identity.Name;
+            var currentUserId = this.User.Identity.GetUserId();
 
-            var result = this.users.Delete(currentUser);
+            if (this.users.FindUserById(currentUserId) == null)
+            {
+                return this.NotFound();
+            }
+
+            var result = this.users.Delete(currentUserId);
 
             return this.Ok(result);
         }
