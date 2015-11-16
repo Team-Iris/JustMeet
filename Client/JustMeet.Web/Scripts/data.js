@@ -1,5 +1,25 @@
 ﻿var data = (function () {
-    function register(info) {
+    var CONSTANTS = {
+        USERNAME_LOCAL_STORAGE_KEY: 'username',
+        AUTH_KEY_LOCAL_STORAGE_KEY: 'user-auth-key'
+    };
+
+    function userIsLoggedIn() {
+        var hasUsername = localStorage.getItem(CONSTANTS.USERNAME_LOCAL_STORAGE_KEY) != undefined;
+        var hasAuthKey = localStorage.getItem(CONSTANTS.AUTH_KEY_LOCAL_STORAGE_KEY) != undefined;
+
+        return hasUsername && hasAuthKey;
+    }
+
+    function getUserInfo() {
+        return {
+            username: localStorage.getItem(CONSTANTS.USERNAME_LOCAL_STORAGE_KEY),
+            authkey: localStorage.getItem(CONSTANTS.AUTH_KEY_LOCAL_STORAGE_KEY),
+            isLoggedIn: userIsLoggedIn()
+        };
+    }
+
+    function register(info, context) {
         var options = {
             data: info
         };
@@ -8,6 +28,7 @@
             .post('http://localhost:53232/api/Account/Register', options)
             .then(function (response) {
                 toastr.success('Register was successful.');
+                context.redirect('/#/');
             },
             function (err) {
                 var modelState = $.parseJSON(err.responseText).ModelState;
@@ -22,7 +43,7 @@
             });
     };
 
-    function login(username, password) {
+    function login(username, password, context) {
         var options = {
             data: {
                 username: username,
@@ -34,24 +55,22 @@
         authkeyRequester
             .post('http://localhost:53232/api/Account/Login', options)
             .then(function (response) {
-                console.log(response);
+                toastr.success('Login was successful.');
+                localStorage.setItem(CONSTANTS.USERNAME_LOCAL_STORAGE_KEY, response['userName']);
+                localStorage.setItem(CONSTANTS.AUTH_KEY_LOCAL_STORAGE_KEY, response['access_token']);
+                context.redirect('/#/');
             },
             function (err) {
-                var modelState = $.parseJSON(err.responseText).ModelState;
-
-                for (var key in modelState) {
-                    var errors = modelState[key];
-
-                    for (var index in errors) {
-                        toastr.error(errors[index]);
-                    }
-                }
+                var error = $.parseJSON(err.responseText)['error_description'];
+                toastr.error(error);
             });
     };
 
     var data = {
         register: register,
-        login: login
+        login: login,
+        hasUser: userIsLoggedIn,
+        userInfo: getUserInfo
     };
 
     return data;

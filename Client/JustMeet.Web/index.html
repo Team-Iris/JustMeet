@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/toastr.min.css" rel="stylesheet" />
-    <link href="Content/themes/base/base.css" />
+    <link href="Content/themes/base/base.css" rel="stylesheet" />
+    <link href="Content/themes/base/theme.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -17,13 +18,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">JustMeet</a>
+                <a class="navbar-brand" href="/#/">JustMeet</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#/register">Register</a></li>
-                    <li><a href="#/login">Login</a></li>
-                </ul>
+                <div id="user-panel">
+                </div>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search">
@@ -62,6 +61,7 @@
     <script src="Scripts/templates.js"></script>
 
     <script src="Controllers/user-controller.js"></script>
+    <script src="Controllers/home-controller.js"></script>
 
     <script src="Scripts/index.js"></script>
 </body>

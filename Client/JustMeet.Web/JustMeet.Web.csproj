@@ -97,6 +97,7 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="Controllers\home-controller.js" />
     <Content Include="Controllers\user-controller.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
@@ -121,6 +122,7 @@
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
     <None Include="Views\login.handlebars" />
+    <None Include="Views\user-panel.handlebars" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

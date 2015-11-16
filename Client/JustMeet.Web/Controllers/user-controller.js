@@ -1,11 +1,31 @@
 ﻿var userController = (function () {
-    function register() {
+    var CONSTANTS = {
+        USERNAME_LOCAL_STORAGE_KEY: 'username',
+        AUTH_KEY_LOCAL_STORAGE_KEY: 'user-auth-key'
+    };
+
+    function setUserPanel() {
+        var info = data.userInfo();
+        templates
+            .get('user-panel')
+            .then(function (template) {
+                $('#user-panel').html(template(info));
+            })
+    }
+
+    function logout(context) {
+        localStorage.removeItem(CONSTANTS.USERNAME_LOCAL_STORAGE_KEY);
+        localStorage.removeItem(CONSTANTS.AUTH_KEY_LOCAL_STORAGE_KEY);
+        context.redirect('#/');
+    }
+
+    function register(context) {
         templates
             .get('register')
             .then(function (data) {
                 $('#main-container').html(data);
                 $('#register-btn').on('click', function () {
-                    registerUser();
+                    registerUser(context);
                 });
 
                 $(function () {
@@ -14,7 +34,7 @@
             });
     }
 
-    function registerUser() {
+    function registerUser(context) {
         var username = $('#username').val();
         var password = $('#password').val();
         var passConfirm = $('#pass-confirm').val();
@@ -33,30 +53,32 @@
             isMale: isMale
         }
 
-        data.register(user);
+        data.register(user, context);
     }
 
-    function login() {
+    function login(context) {
         templates
             .get('login')
             .then(function (data) {
                 $('#main-container').html(data);
                 $('#login-btn').on('click', function () {
-                    loginUser();
+                    loginUser(context);
                 })
             })
     }
 
-    function loginUser() {
+    function loginUser(context) {
         var username = $('#username').val();
         var password = $('#password').val();
 
-        data.login(username, password);
+        data.login(username, password, context);
     }
 
     var userController = {
         register: register,
-        login: login
+        login: login,
+        setUserPanel: setUserPanel,
+        logout: logout
     };
 
     return userController;
