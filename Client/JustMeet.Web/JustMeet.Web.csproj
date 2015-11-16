@@ -62,6 +62,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\main.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -100,6 +101,8 @@
     <Content Include="Controllers\home-controller.js" />
     <Content Include="Controllers\user-controller.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\logo.png" />
     <Content Include="index.html" />
     <Content Include="Scripts\authkey-requester.js" />
     <Content Include="Scripts\bootstrap.js" />
