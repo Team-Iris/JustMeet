@@ -1,15 +1,47 @@
 ﻿body {
     padding: 0;
     margin: 0;
-    background-color:#111
+    background-color: #111;
 }
 
-label{
-    color: #fff
+label, a {
+    color: #fff;
 }
 
-.container{
-    max-width: 100% !important
+    a:hover {
+        color: #aaa;
+    }
+
+input {
+    border-radius: 0 !important;
+}
+
+h1, h2, h3, h4 {
+    color: #AB1613;
+}
+
+.container {
+    max-width: 100% !important;
+}
+
+.row {
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+.btn {
+    color: #fff !important;
+    background-color: #AB1613 !important;
+    border-radius: 0;
+    border: 0;
+}
+
+li.dropdown.open, .dropdown-menu > li > a:hover, .navbar-default .navbar-nav > .open > a {
+    background-color: #AB1613 !important;
+}
+
+.dropdown-menu {
+    border-radius: 0;
 }
 
 .navbar.navbar-default {
@@ -51,15 +83,19 @@ label{
     color: #aaa !important;
 }
 
-.profileNames {
+.panel-body{
+    background-color: #eee;
+}
+
+.profileNames, #logged-in-container .title {
     text-align: center;
 }
 
-.avatar{
+.avatar {
     padding: 20px;
 }
 
-#avatar{
+#avatar {
     max-width: 100%;
 }
 
@@ -69,9 +105,9 @@ label{
     margin: auto;
 }
 
-.gender-in{
-    width:50%;
-    margin-left: 33%
+.gender-in {
+    width: 50%;
+    margin-left: 33%;
 }
 
 .gender-icon {
@@ -83,41 +119,68 @@ label{
         opacity: 1;
     }
 
-    .update-profile a{
-        color: #000
-    }
-
-/*.box {
-    width: 100%;
-    height: 330px;
-    border-radius: .5em;
+.update-profile a {
+    color: #000;
 }
 
 .slider {
-    width: 100%;
-    overflow: hidden;
-    display: inline-block;
-    transform: skewX(-20deg);
-    transition: width 1.2s ease-in-out;
-    margin-left: -76px;
-   pointer-events: none;
+    min-height: 200px;
 }
 
-.sunrise {
-    position: absolute;
-    background: url('../Images/perfect-relationship.jpg') no-repeat;
+#home-form-group .row h1, #home-form-group .row a {
+    position: relative;
+    margin: auto;
+}
+
+#home-form-group .row {
+    text-align: center;
+    margin-bottom: 2% !important;
+}
+
+    #home-form-group .row a.signup {
+        background-color: transparent !important;
+        border: 1px solid #fff;
+    }
+
+        #home-form-group .row a.signup:hover {
+            color: #fff !important;
+            background-color: #AB1613 !important;
+            border-radius: 0;
+            border: 1px solid #AB1613;
+        }
+
+.slider .box img {
+    margin: auto;
+    position: relative;
+    display: block;
     box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    margin-bottom: 50px
+}
+.profile{
+    padding: 5px;
+    border: 1px solid transparent;
 }
 
-.sunset {
-    transform: skewX(20deg);
-    background-image: url('../Images/635634260119329904-1287501582_boyfriend-cheats.imgopt1000x70.jpg');
+.profile img{
+    max-height: 200px;
+        margin: auto;
+    position: relative;
+    display: block;
 }
 
-.slider:hover {
-    width: 760px;
+.profile.info{
+    text-align: center;
 }
-        
-.sunrise:hover + .slider { 
-    width: 250px;
-}*/
+
+.profile strong{
+    color: #999;
+}
+
+.profile:hover {
+    background-color: #444;
+    border: 1px solid #fff;
+
+}
+.profile:hover strong{
+    color: #fff
+}

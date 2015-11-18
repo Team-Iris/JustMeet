@@ -79,6 +79,35 @@
         })
     };
 
+    function get(number) {
+        var options = {
+            headers: {
+                Authorization: 'Bearer ' + localStorage[CONSTANTS.AUTH_KEY_LOCAL_STORAGE_KEY]
+            }
+        }
+
+        return jsonRequester.get('http://localhost:53232/api/users/all?page=1&pageSize=' + number, options)
+        .then(function (response) {
+            return response
+        })
+    }
+
+    function update(user) {
+        var options = {
+            headers: {
+                Authorization: 'Bearer ' + localStorage[CONSTANTS.AUTH_KEY_LOCAL_STORAGE_KEY]
+            },
+            data: {
+                user
+            }
+        }
+
+        return jsonRequester.post('http://localhost:53232/api/users/update', options)
+            .then(function (response) {
+                return response
+            })
+    }
+
     return ({
         auth: {
             register: register,
@@ -88,6 +117,10 @@
         },
         profile: {
             myProfile: myProfile
+        },
+        users: {
+            get: get,
+            update: update
         }
     });
 })();

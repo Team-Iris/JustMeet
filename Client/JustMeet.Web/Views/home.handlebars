@@ -1,0 +1,31 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="slider">
+            <div class="box">
+                <img src="../Images/635634260119329904-1287501582_boyfriend-cheats.imgopt1000x70.jpg" />
+            </div>
+        </div>
+    </div>
+    {{#if isLoggedIn}}
+    <div id="logged-in-container">
+        <div class="title">
+            <h1>Meet people around you!</h1>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+    {{else}}
+    <div id="home-form-group" class="form-group ">
+        <div class="row">
+            <h1 class="title">Sign up and find your soulmate!</h1>
+        </div>
+        <div class="row">
+            <a href="#/register" class="btn btn-default signup">Sign up</a>
+        </div>
+        <div class="row">
+            <a href="#/login" class="">Already have an account?</a>
+        </div>
+    </div>
+    {{/if}}
+</div>

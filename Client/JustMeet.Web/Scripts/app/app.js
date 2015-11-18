@@ -15,6 +15,8 @@
         this.get('#/register', userController.register);
 
         this.get('#/my-profile', myProfileController.all);
+
+        this.get('#/update-profile', updateProfileController.get)
     });
 
     $(function () {

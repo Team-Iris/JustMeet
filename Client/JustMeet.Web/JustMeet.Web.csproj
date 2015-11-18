@@ -109,13 +109,17 @@
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="Controllers\home-controller.js" />
+    <Content Include="Controllers\list-users-controller.js" />
     <Content Include="Controllers\my-profile-controller.js" />
+    <Content Include="Controllers\update-profile-controller.js" />
     <Content Include="Controllers\user-controller.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\635634260119329904-1287501582_boyfriend-cheats.imgopt1000x70.jpg" />
     <Content Include="Images\favicon.png" />
     <Content Include="Images\female.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\male.png" />
+    <Content Include="Images\perfect-relationship.jpg" />
     <Content Include="index.html" />
     <Content Include="Scripts\app\authkey-requester.js" />
     <Content Include="Scripts\app\libraries\bootstrap.js" />
@@ -131,15 +135,19 @@
     <Content Include="Scripts\app\libraries\jquery-ui-1.11.4.js" />
     <Content Include="Scripts\app\libraries\jquery-ui-1.11.4.min.js" />
     <Content Include="Scripts\app\json-requester.js" />
+    <Content Include="Scripts\app\libraries\moment.min.js" />
     <Content Include="Scripts\app\libraries\sammy-0.7.5.js" />
     <Content Include="Scripts\app\libraries\sammy-0.7.5.min.js" />
     <Content Include="Scripts\app\templates.js" />
+    <Content Include="Views\list-users.handlebars" />
     <None Include="Views\my-profile.handlebars" />
     <None Include="Views\register.handlebars" />
     <Content Include="Scripts\app\libraries\toastr.js" />
     <Content Include="Scripts\app\libraries\toastr.min.js" />
     <None Include="Views\login.handlebars" />
+    <Content Include="Views\update-profile.handlebars" />
     <None Include="Views\user-panel.handlebars" />
+    <None Include="Views\home.handlebars" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

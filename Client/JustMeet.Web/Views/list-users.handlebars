@@ -1,0 +1,13 @@
+﻿{{#each this}}
+<div class="col-sm-4 col-xs-16">
+    <div class="profile info">
+        <strong>{{FirstName}} {{LastName}}</strong>
+        <br />
+        <img {{#if IsMale}} src="https://upload.wikimedia.org/wikipedia/en/9/90/Bale_as_Batman.jpg" {{else}} src="https://s-media-cache-ak0.pinimg.com/736x/d2/f6/01/d2f601d46629376ef656e7174d0a9149.jpg" {{/if}} alt="" class="img-circle">
+        <strong>{{Email}}</strong>
+        <br />
+        <strong>{{Years}} old</strong>
+        <br />
+    </div>
+</div>
+{{/each}}
