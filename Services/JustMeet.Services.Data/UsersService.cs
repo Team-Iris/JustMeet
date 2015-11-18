@@ -84,5 +84,10 @@
         {
             return this.users.GetById(id);
         }
+
+        public User FindUserByEmail(string email)
+        {
+            return this.users.All().Where(u => u.Email == email).FirstOrDefault();
+        }
     }
 }

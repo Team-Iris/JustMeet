@@ -20,5 +20,7 @@
         string Delete(string username);
 
         User FindUserById(string id);
+
+        User FindUserByEmail(string email);
     }
 }
