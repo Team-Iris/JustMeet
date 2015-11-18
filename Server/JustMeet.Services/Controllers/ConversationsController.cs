@@ -7,15 +7,15 @@
     using System.Web.Http;
     using System.Web.Http.Cors;
 
-    using JustMeet.Services.Providers;
-    using JustMeet.Services.Models.Conversation;
+    using Providers;
+    using Models.Conversation;
     using JustMeet.Data;
     using JustMeet.Models;
 
     [EnableCors("*", "*", "*")]
     public class ConversationsController : ApiController
     {
-        protected JustMeetDbContext data;
+        private JustMeetDbContext data;
 
         public ConversationsController(JustMeetDbContext data)
         {
@@ -29,6 +29,7 @@
             {
                 return this.BadRequest(this.ModelState);
             }
+
             var topic = this.data.Conversations.Select(x => x.Topic).FirstOrDefault();
             var text = this.data.Conversations.Select(x => x.Text).FirstOrDefault();
             var startedOn = this.data.Conversations.Select(x => x.StartedOn).FirstOrDefault();

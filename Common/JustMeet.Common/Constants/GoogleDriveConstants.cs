@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JustMeet.Common.Constants
+﻿namespace JustMeet.Common.Constants
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
     public class GoogleDriveConstants
     {
         // https://drive.google.com/uc?export=view&id={fileId}

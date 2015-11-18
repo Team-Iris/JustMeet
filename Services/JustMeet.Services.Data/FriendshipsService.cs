@@ -21,7 +21,7 @@
         {
             var friendshipExists = this.friendships
              .All()
-             .Where(f => (f.FirstUserId == firstUserId && f.SecondUserId == secondUserId)||(f.SecondUserId == firstUserId && f.FirstUserId == secondUserId))
+             .Where(f => (f.FirstUserId == firstUserId && f.SecondUserId == secondUserId) || (f.SecondUserId == firstUserId && f.FirstUserId == secondUserId))
              .ToList();
 
             if (friendshipExists.Count > 0)
@@ -39,12 +39,48 @@
             this.friendships.SaveChanges();
         }
 
+        public bool Delete(string firstUserId, string secondUserId)
+        {
+            var isDeleted = false;
+            var friendship = this.friendships
+             .All()
+             .Where(f => (f.FirstUserId == firstUserId && f.SecondUserId == secondUserId) || (f.SecondUserId == firstUserId && f.FirstUserId == secondUserId))
+             .FirstOrDefault();
+
+            if (friendship != null)
+            {
+                this.friendships.Delete(friendship);
+                this.friendships.SaveChanges();
+                isDeleted = true;
+            }
+
+            return isDeleted;
+        }
+
         public IQueryable<Friendship> All(string userId)
         {
             return this.friendships
              .All()
-             .Where(f => f.FirstUserId == userId)
+             .Where(f => f.FirstUserId == userId || f.SecondUserId == userId)
              .OrderByDescending(f => f.IsApproved);
+        }
+
+        public bool Approve(string firstUserId, string secondUserId)
+        {
+            var successfullyApproved = false;
+            var friendship = this.friendships
+                .All()
+                .Where(f => f.FirstUserId == firstUserId && f.SecondUserId == secondUserId)
+                .FirstOrDefault();
+
+            if (friendship != null)
+            {
+                friendship.IsApproved = true;
+                successfullyApproved = true;
+            }
+
+            this.friendships.SaveChanges();
+            return successfullyApproved;
         }
     }
 }

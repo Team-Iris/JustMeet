@@ -5,10 +5,10 @@
     public class PubNubNotificationProvider
     {
         private const string Channel = "TeamIrisJustMeetProject";
-        private const string publishKey = "pub-c-1af3bc49-5fd0-46f3-922e-7bf959e7f9d4";
-        private const string subscribekey = "sub-c-0ce36a44-8de7-11e5-9320-02ee2ddab7fe";
+        private const string PublishKey = "pub-c-1af3bc49-5fd0-46f3-922e-7bf959e7f9d4";
+        private const string Subscribekey = "sub-c-0ce36a44-8de7-11e5-9320-02ee2ddab7fe";
 
-        private static Pubnub pubnub = new Pubnub(publishKey, subscribekey);
+        private static Pubnub pubnub = new Pubnub(PublishKey, Subscribekey);
 
         public static string LastMessage { get; private set; }
 
@@ -20,6 +20,5 @@
                 (x) => LastMessage = x.ToString(), 
                 (e) => LastError = e.ToString());
         }
-
     }
 }

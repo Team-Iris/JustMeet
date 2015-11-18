@@ -5,17 +5,16 @@
     using System.Web.Http.Cors;
     using Data;
     using JustMeet.Data;
-    using Models.Images;
-    using Microsoft.AspNet.Identity;
     using JustMeet.Models;
+    using Microsoft.AspNet.Identity;
+    using Models.Images;
 
     [EnableCors("*", "*", "*")]
     [Authorize]
     public class ImagesController : ApiController
     {
-        protected JustMeetDbContext data;
-        protected GoogleDriveService drive;
-
+        private JustMeetDbContext data;
+        private GoogleDriveService drive;
 
         public ImagesController(JustMeetDbContext data, GoogleDriveService drive)
         {
@@ -27,7 +26,7 @@
         /// Gets user image(s) link(s) from database.
         /// </summary>
         /// <returns>List of link(s)</returns>
-        // GET api/Images/
+        /// GET api/Images/
         [HttpGet]
         public IHttpActionResult Get()
         {
@@ -47,8 +46,8 @@
         public IHttpActionResult Post([FromBody]PostImageRequestModel image)
         {
             var currentUserId = this.User.Identity.GetUserId();
-            var fileId = drive.UploadFile(image.imageData,image.imageNameOrPathWithExtension);
-            string ext = System.IO.Path.GetExtension(image.imageNameOrPathWithExtension).ToLower();
+            var fileId = drive.UploadFile(image.ImageData,image.ImageNameOrPathWithExtension);
+            string ext = System.IO.Path.GetExtension(image.ImageNameOrPathWithExtension).ToLower();
             var imageToAdd = new Image()
             {
                 ImageUrl = drive.GetLinkById(fileId),
