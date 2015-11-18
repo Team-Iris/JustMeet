@@ -7,6 +7,7 @@
     {
         public int Id { get; set; }
 
+        [MaxLength(50)]
         public string Topic { get; set; }
 
         [Required]
@@ -15,7 +16,8 @@
 
         public DateTime StartedOn { get; set; }
 
-        public int AuthorId { get; set; }
+        [Required]
+        public string AuthorId { get; set; }
 
         public virtual User Author { get; set; }
 

@@ -1,6 +1,7 @@
 ﻿namespace JustMeet.Models
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class Friendship
     {
@@ -13,11 +14,13 @@
 
         public int Id { get; set; }
 
-        public int FirstUserId { get; set; }
+        [Required]
+        public string FirstUserId { get; set; }
 
         public User FirstUser { get; set; }
 
-        public int SecondUserId { get; set; }
+        [Required]
+        public string SecondUserId { get; set; }
 
         public User SecondUser { get; set; }
 
