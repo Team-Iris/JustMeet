@@ -93,5 +93,17 @@
 
             return this.Ok(result);
         }
+
+        [Authorize]
+        [Route("api/users/random")]
+        public IHttpActionResult Get(int numberOfUsers)
+        {
+            var result = this.users
+                .Random(numberOfUsers)
+                .ProjectTo<UserDetailsResponseModel>()
+                .ToList();
+
+            return this.Ok(result);
+        }
     }
 }

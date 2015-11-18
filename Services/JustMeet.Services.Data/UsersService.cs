@@ -89,5 +89,13 @@
         {
             return this.users.All().Where(u => u.Email == email).FirstOrDefault();
         }
+
+        public IQueryable<User> Random(int numberOfUsers)
+        {
+            return this.users
+                .All()
+                .OrderBy(x => Guid.NewGuid())
+                .Take(numberOfUsers);
+        }
     }
 }

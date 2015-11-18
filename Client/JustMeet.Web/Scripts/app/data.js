@@ -86,7 +86,7 @@
             }
         }
 
-        return jsonRequester.get('http://localhost:53232/api/users/all?page=1&pageSize=' + number, options)
+        return jsonRequester.get('http://localhost:53232/api/users/random?numberOfUsers=3', options)
         .then(function (response) {
             return response
         })

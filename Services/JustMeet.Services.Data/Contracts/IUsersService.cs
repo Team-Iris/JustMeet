@@ -15,6 +15,8 @@
 
         IQueryable<User> Select(string email);
 
+        IQueryable<User> Random(int numberOfUsers);
+
         string Update(string username, string firstName, string lastName, DateTime birthday, bool isMale, string description);
 
         string Delete(string username);
