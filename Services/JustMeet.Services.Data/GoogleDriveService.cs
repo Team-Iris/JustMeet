@@ -106,7 +106,22 @@
 
         public string GetLinkById(string fileId)
         {
+            if (fileId.Length == 0)
+            {
+                throw new ArgumentException("Error: Empty fileId is passed!");
+            }
+
             return GoogleDriveConstants.PremanentLinkPrefix + fileId;
+        }
+
+        public string GetIdByLink(string fileLink)
+        {
+            if (!fileLink.Contains(GoogleDriveConstants.PremanentLinkPrefix))
+            {
+                throw new ArgumentException("Error: Bad fileLink is passed!");
+            }
+
+            return fileLink.Substring(GoogleDriveConstants.PremanentLinkPrefix.Length);
         }
 
         private static string GetMimeType(string fileName)

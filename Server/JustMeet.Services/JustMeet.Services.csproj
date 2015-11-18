@@ -267,6 +267,8 @@
     <Compile Include="Models\Account\UserLoginInfoViewModel.cs" />
     <Compile Include="Models\Conversation\ConversationRequestModel.cs" />
     <Compile Include="Models\Conversation\ConversationResponseModel.cs" />
+    <Compile Include="Models\Images\PostImageRequestModel.cs" />
+    <Compile Include="Models\Images\ImageLinkRequestModel.cs" />
     <Compile Include="Models\User\UserDetailsResponseModel.cs" />
     <Compile Include="Models\User\UserUpdateRequestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
