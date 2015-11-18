@@ -5,7 +5,7 @@
     };
 
     function setUserPanel() {
-        var info = data.userInfo();
+        var info = data.auth.userInfo();
         templates
             .get('user-panel')
             .then(function (template) {
@@ -53,7 +53,7 @@
             isMale: isMale
         }
 
-        data.register(user, context);
+        data.auth.register(user, context);
     }
 
     function login(context) {
@@ -71,7 +71,7 @@
         var username = $('#username').val();
         var password = $('#password').val();
 
-        data.login(username, password, context);
+        data.auth.login(username, password, context);
     }
 
     var userController = {

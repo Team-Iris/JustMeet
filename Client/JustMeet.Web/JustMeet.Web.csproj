@@ -101,10 +101,13 @@
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="Controllers\home-controller.js" />
+    <Content Include="Controllers\my-profile-controller.js" />
     <Content Include="Controllers\user-controller.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\favicon.png" />
+    <Content Include="Images\female.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\male.png" />
     <Content Include="index.html" />
     <Content Include="Scripts\app\authkey-requester.js" />
     <Content Include="Scripts\app\libraries\bootstrap.js" />
@@ -114,7 +117,7 @@
     <None Include="Scripts\app\libraries\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\app\data.js" />
     <Content Include="Scripts\app\libraries\handlebars-v4.0.4.js" />
-    <Content Include="Scripts\app\index.js" />
+    <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\libraries\jquery-1.9.1.js" />
     <Content Include="Scripts\app\libraries\jquery-1.9.1.min.js" />
     <Content Include="Scripts\app\libraries\jquery-ui-1.11.4.js" />
@@ -123,6 +126,7 @@
     <Content Include="Scripts\app\libraries\sammy-0.7.5.js" />
     <Content Include="Scripts\app\libraries\sammy-0.7.5.min.js" />
     <Content Include="Scripts\app\templates.js" />
+    <None Include="Views\my-profile.handlebars" />
     <None Include="Views\register.handlebars" />
     <Content Include="Scripts\app\libraries\toastr.js" />
     <Content Include="Scripts\app\libraries\toastr.min.js" />

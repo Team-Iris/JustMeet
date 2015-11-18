@@ -1,0 +1,48 @@
+﻿<div class="panel panel-success">
+    <div class="panel-heading">
+        <h1 class="profileNames"><strong>{{Email}}</strong></h1>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="avatar">
+                    <img id="avatar" src="" alt="">
+                </div>
+                <div class="gender">
+                    <div class="gender-in">
+                        <img class="gender-icon female" src="../Images/female.png" />
+                        <img class="gender-icon male" src="../Images/male.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="information">
+                    <div class="panel-heading">
+                        <h4>Обща информация</h4>
+                    </div>
+                    <strong>Име: </strong>
+                    <span>{{FirstName}}</span>
+                    <br />
+                    <strong>Фамилия: </strong>
+                    <span>{{LastName}}</span>
+                    <br />
+                    <strong>Дата на раждане: </strong>
+                    <p>{{DateOfBirth}}</p>
+                    <br />
+                    <div class="update-profile">
+                        <a href="#/update-profile"><span class="glyphicon glyphicon-cog"></span> Update profile information</a>
+                    </div>
+                </div>
+            </div>
+            {{#if Description}}
+            <div class="col-sm-4">
+                <div class="description">
+                    <h2>Описание: </h2>
+                    <br />
+                    <p>{{Description}}</p>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

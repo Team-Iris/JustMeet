@@ -1,6 +1,15 @@
 ﻿body {
     padding: 0;
     margin: 0;
+    background-color:#111
+}
+
+label{
+    color: #fff
+}
+
+.container{
+    max-width: 100% !important
 }
 
 .navbar.navbar-default {
@@ -10,10 +19,73 @@
     height: 80px;
 }
 
+    .navbar.navbar-default a {
+        color: #aaa !important;
+    }
+
+        .navbar.navbar-default a:hover {
+            color: #fff !important;
+        }
+
 .navbar #navbar-logo img {
     height: 80px;
     margin-top: -8%;
 }
+
+.container-fluid {
+    margin-top: 1% !important;
+}
+
+#navbar-logo {
+    padding-top: 0;
+}
+
+#main-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: -1px;
+}
+
+.panel-heading {
+    background-color: #1a1a1a !important;
+    color: #aaa !important;
+}
+
+.profileNames {
+    text-align: center;
+}
+
+.avatar{
+    padding: 20px;
+}
+
+#avatar{
+    max-width: 100%;
+}
+
+.gender {
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.gender-in{
+    width:50%;
+    margin-left: 33%
+}
+
+.gender-icon {
+    max-height: 50px;
+    opacity: 0.5;
+}
+
+    .gender-icon.active {
+        opacity: 1;
+    }
+
+    .update-profile a{
+        color: #000
+    }
 
 /*.box {
     width: 100%;

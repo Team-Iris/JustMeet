@@ -58,7 +58,7 @@
                 toastr.success('Login was successful.');
                 localStorage.setItem(CONSTANTS.USERNAME_LOCAL_STORAGE_KEY, response['userName']);
                 localStorage.setItem(CONSTANTS.AUTH_KEY_LOCAL_STORAGE_KEY, response['access_token']);
-                context.redirect('/#/');
+                context.redirect('#/');
             },
             function (err) {
                 var error = $.parseJSON(err.responseText)['error_description'];
@@ -66,12 +66,28 @@
             });
     };
 
-    var data = {
-        register: register,
-        login: login,
-        hasUser: userIsLoggedIn,
-        userInfo: getUserInfo
+    function myProfile() {
+        var options = {
+            headers: {
+                Authorization: 'Bearer ' + localStorage[CONSTANTS.AUTH_KEY_LOCAL_STORAGE_KEY]
+            }
+        }
+
+        return jsonRequester.get('http://localhost:53232/api/users/profile', options)
+        .then(function (response) {
+            return response
+        })
     };
 
-    return data;
+    return ({
+        auth: {
+            register: register,
+            login: login,
+            hasUser: userIsLoggedIn,
+            userInfo: getUserInfo
+        },
+        profile: {
+            myProfile: myProfile
+        }
+    });
 })();
