@@ -122,8 +122,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IFriendshipsService.cs" />
     <Compile Include="Contracts\IGoogleDriveService.cs" />
     <Compile Include="Contracts\IUsersService.cs" />
+    <Compile Include="FriendshipsService.cs" />
     <Compile Include="GoogleDriveService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsersService.cs" />
