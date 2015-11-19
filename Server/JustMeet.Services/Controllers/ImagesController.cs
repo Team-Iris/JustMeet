@@ -4,6 +4,7 @@
     using System.Web.Http;
     using System.Web.Http.Cors;
     using Data;
+    using Data.Contracts;
     using JustMeet.Data;
     using JustMeet.Models;
     using Microsoft.AspNet.Identity;
@@ -13,10 +14,10 @@
     [Authorize]
     public class ImagesController : ApiController
     {
-        private JustMeetDbContext data;
-        private GoogleDriveService drive;
+        private IJustMeetDbContext data;
+        private IGoogleDriveService drive;
 
-        public ImagesController(JustMeetDbContext data, GoogleDriveService drive)
+        public ImagesController(IJustMeetDbContext data, IGoogleDriveService drive)
         {
             this.data = data;
             this.drive = drive;
