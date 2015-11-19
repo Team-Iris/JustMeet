@@ -1,7 +1,9 @@
 ﻿var data = (function () {
     var CONSTANTS = {
         USERNAME_LOCAL_STORAGE_KEY: 'username',
-        AUTH_KEY_LOCAL_STORAGE_KEY: 'user-auth-key'
+        AUTH_KEY_LOCAL_STORAGE_KEY: 'user-auth-key',
+        SERVER_ADDRESS: 'http://localhost:53232/'
+        //SERVER_ADDRESS: 'http://just-meet.azurewebsites.net/'
     };
 
     function userIsLoggedIn() {
@@ -25,7 +27,7 @@
         };
 
         jsonRequester
-            .post('http://localhost:53232/api/Account/Register', options)
+            .post(CONSTANTS.SERVER_ADDRESS + 'api/Account/Register', options)
             .then(function (response) {
                 toastr.success('Register was successful.');
                 context.redirect('/#/');
@@ -53,7 +55,7 @@
         };
 
         authkeyRequester
-            .post('http://localhost:53232/api/Account/Login', options)
+            .post(CONSTANTS.SERVER_ADDRESS + 'api/Account/Login', options)
             .then(function (response) {
                 toastr.success('Login was successful.');
                 localStorage.setItem(CONSTANTS.USERNAME_LOCAL_STORAGE_KEY, response['userName']);
@@ -73,7 +75,7 @@
             }
         }
 
-        return jsonRequester.get('http://localhost:53232/api/users/profile', options)
+        return jsonRequester.get(CONSTANTS.SERVER_ADDRESS + 'api/users/profile', options)
         .then(function (response) {
             return response
         })
@@ -86,7 +88,7 @@
             }
         }
 
-        return jsonRequester.get('http://localhost:53232/api/users/random?numberOfUsers=3', options)
+        return jsonRequester.get(CONSTANTS.SERVER_ADDRESS + 'api/users/random?numberOfUsers=3', options)
         .then(function (response) {
             return response
         })
@@ -102,7 +104,7 @@
             }
         }
 
-        return jsonRequester.post('http://localhost:53232/api/users/update', options)
+        return jsonRequester.post(CONSTANTS.SERVER_ADDRESS + 'api/users/update', options)
             .then(function (response) {
                 return response
             })
