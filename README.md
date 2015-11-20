@@ -9,7 +9,7 @@
 
 ##### Явор Комитов [[telerik]](http://telerikacademy.com/Users/ykomitov) [[github]](https://github.com/ykomitov)
 
-[[Link to the application]](http://http://just-meet-client.azurewebsites.net)
+[[Link to the application]](http://just-meet-client.azurewebsites.net)
 
 **Dating web application**
 
