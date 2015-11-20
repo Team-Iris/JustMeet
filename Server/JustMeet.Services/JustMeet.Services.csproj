@@ -345,6 +345,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ProjectClassDiagram.cd" />
+    <Content Include="ClassDiagram.cd" />
+    <Content Include="ControllersClassDiagram.cd" />
     <None Include="Properties\PublishProfiles\irisjustmeet - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\just-meet.pubxml" />
   </ItemGroup>

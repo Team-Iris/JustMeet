@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JustMeet.Services.AutoMapperConfig" Collapsed="true">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>App_Start\AutoMapperConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.DatabaseConfig" Collapsed="true">
+    <Position X="14.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\DatabaseConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.ApplicationUserManager" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\IdentityConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Startup" Collapsed="true">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAEAgIAAAAAAAAA=</HashCode>
+      <FileName>App_Start\Startup.Auth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.WebApiConfig" Collapsed="true">
+    <Position X="16" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\WebApiConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.WebApiApplication" Collapsed="true">
+    <Position X="14.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.App_Start.NinjectConfig" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQACAAAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAA=</HashCode>
+      <FileName>App_Start\NinjectConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Controllers.AccountController" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAEACAACAAgQAAEAARAgIAABABEBAAAAAAgAAAAQA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Controllers.ConversationsController" Collapsed="true">
+    <Position X="12.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\ConversationsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Controllers.FriendshipsController" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Controllers\FriendshipsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Controllers.ImagesController" Collapsed="true">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAACACAEAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\ImagesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Controllers.UsersController" Collapsed="true">
+    <Position X="10.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\UsersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Infrastructure.ObjectFactory" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQBAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\ObjectFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.AddExternalLoginBindingModel" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Account\AddExternalLoginBindingModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.ChangePasswordBindingModel" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\Account\ChangePasswordBindingModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.ExternalLoginViewModel" Collapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAABAAAAAA=</HashCode>
+      <FileName>Models\Account\ExternalLoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.ManageInfoViewModel" Collapsed="true">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAQAAAAAAAAAAAAAQAQAAAAAAA=</HashCode>
+      <FileName>Models\Account\ManageInfoViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.RegisterBindingModel" Collapsed="true">
+    <Position X="9" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAAAAAAAAAAQgAACAAAAAAAAIAg=</HashCode>
+      <FileName>Models\Account\RegisterBindingModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.RegisterExternalBindingModel" Collapsed="true">
+    <Position X="10.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Account\RegisterExternalBindingModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.RemoveLoginBindingModel" Collapsed="true">
+    <Position X="12.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Account\RemoveLoginBindingModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.SetPasswordBindingModel" Collapsed="true">
+    <Position X="16" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\Account\SetPasswordBindingModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.UserInfoViewModel" Collapsed="true">
+    <Position X="21.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Models\Account\UserInfoViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Account.UserLoginInfoViewModel" Collapsed="true">
+    <Position X="9" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Account\UserLoginInfoViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Conversation.ConversationRequestModel" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCAAAAA=</HashCode>
+      <FileName>Models\Conversation\ConversationRequestModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Conversation.ConversationResponseModel" Collapsed="true">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Conversation\ConversationResponseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Friendship.FriendshipResponseModel" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Friendship\FriendshipResponseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Images.DeleteImageRequestModel" Collapsed="true">
+    <Position X="16" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Models\Images\ImageLinkRequestModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.Images.PostImageRequestModel" Collapsed="true">
+    <Position X="14.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Models\Images\PostImageRequestModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Models.User.UserDetailsResponseModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAgAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\User\UserDetailsResponseModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.362" Collapsed="true" />
+  </Class>
+  <Class Name="JustMeet.Services.Models.User.UserUpdateRequestModel" Collapsed="true">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAgAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\User\UserUpdateRequestModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Providers.ApplicationOAuthProvider" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAACAAAAAIAAAAAAAEAAAIAAAAAAAAAAAgA=</HashCode>
+      <FileName>Providers\ApplicationOAuthProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Providers.PubNubNotificationProvider" Collapsed="true">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAgMAAAAAAAAAAAQAAAAAAAAABAAAAgAAAAAAA=</HashCode>
+      <FileName>Providers\PubNubNotificationProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.ClientNetworkStatus" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMAAAgAAABAEAAAgAAAAAkBQEAQAAAAAAAAIQAAAAQA=</HashCode>
+      <FileName>PubnubCore\ClientNetworkStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.LoggingMethod" Collapsed="true">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAEAAAAAAAAAAQAAAAAAJAAAAAAAAAABA=</HashCode>
+      <FileName>PubnubCore\LoggingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubClientError" Collapsed="true">
+    <Position X="21.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEAQAQAgAAAhAJoEAABAAAAIAAABEACAMAAAIAQBAEA=</HashCode>
+      <FileName>PubnubCore\LoggingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubErrorFilter" Collapsed="true">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAgAAAAIAAAAAAAAAAAAAAEAAAAAAEAAAAA=</HashCode>
+      <FileName>PubnubCore\LoggingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubErrorCodeHelper" Collapsed="true">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\LoggingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubErrorCodeDescription" Collapsed="true">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\LoggingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.MD5CryptoServiceProvider" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\MD5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.MD5" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBACCBAgACJCAQAAhECEQAQAIABAAFAEAABgXGBEAAE=</HashCode>
+      <FileName>PubnubCore\MD5.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubCryptoBase" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAAAAKAAEAAQAAAAAAAAgAAAAgCAAAAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\MD5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.Pubnub" Collapsed="true">
+    <Position X="16" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAhGABGSAQIKKJB0FwQECA0jAHINQBUAAEhChAAQA=</HashCode>
+      <FileName>PubnubCore\Pubnub.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubCore" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>aKNKp2Wj52xRu7PPZ3/1UHuh87wna9WRWZI23+jg15M=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubWebRequestCreatorBase" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAAAQAAAAAAAAE=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubWebRequestBase" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAgAAAGAAACAgAAAiCAiACAAEAAACAQAQQAAEAAE=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubWebResponseBase" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAACAMCAgAABAAAAAQAAAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubWebAsyncResult" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAIAAAAgACAIAAAAGAAAAAAAABAQAgAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubProxy" Collapsed="true">
+    <Position X="17.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAIAAAQCACAEAgAgAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.NewtonsoftJsonDotNet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAQEAAAAAAAAAAAAAACIAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PubNubMessaging.Core.InternetState&lt;T&gt;" Collapsed="true">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAgAAAAAAAAAAAUAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.RequestState&lt;T&gt;" Collapsed="true">
+    <Position X="14.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAEAAABAIAAAAIAAAAAAAAAAgAMAAQAAAAAAEAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubChannelCallback&lt;T&gt;" Collapsed="true">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAQAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubChannelGroupCallback&lt;T&gt;" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAQAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubWin" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBgSBCAgACCAABAIAAAAhABABAAAAgAAGCCAAEAI=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubWebRequestCreator" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubWebRequest" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAACAAAAAAAAAAAAAAAIAQEABIAAAAAwAAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubWebResponse" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.PubnubCrypto" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.MpnsToastNotification" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAQBAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.MpnsFlipTileNotification" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAQAEAIAAARAIgAAgAAAABIAAAAAAAAAAAABA=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.MpnsCycleTileNotification" Collapsed="true">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAQAAAAAAABAAAAAgAEAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.MpnsIconicTileNotification" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAABBAAAAwAAAAFQAAAAAAAAAAAAAI=</HashCode>
+      <FileName>PubnubCore\PubnubWin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.Core.ReconnectState&lt;T&gt;" Collapsed="true">
+    <Position X="21.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAEAAAAAIAAAAAAAAAAAAAAAgAEAAQAAAAAAUAA=</HashCode>
+      <FileName>PubnubCore\ReconnectState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PubNubMessaging.PubnubExampleNET40" Collapsed="true">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>P2JhkIXR/xQJKstHFhgaEGAoqQ6RVx7ehaCCgyNkovo=</HashCode>
+      <FileName>PubnubExampleNET40.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustMeet.Services.Results.ChallengeResult" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Results\ChallengeResult.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="PubNubMessaging.Core.PubnubChannelCallbackKey" Collapsed="true">
+    <Position X="9" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PubNubMessaging.Core.PubnubChannelGroupCallbackKey" Collapsed="true">
+    <Position X="10.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="JustMeet.Services.Infrastructure.Mappings.IHaveCustomMappings" Collapsed="true">
+    <Position X="9" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Infrastructure\Mappings\IHaveCustomMappings.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JustMeet.Services.Infrastructure.Mappings.IMapFrom&lt;TModel&gt;" Collapsed="true">
+    <Position X="12.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Mappings\IMapFrom.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PubNubMessaging.Core.IPubnubUnitTest" Collapsed="true">
+    <Position X="14.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIIAAAAAQAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PubNubMessaging.Core.IJsonPluggableLibrary" Collapsed="true">
+    <Position X="10.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAQEAAAAAAAAAAAAAACIAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PubNubMessaging.Core.PubnubErrorSeverity" Collapsed="true">
+    <Position X="10.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEAAAAA=</HashCode>
+      <FileName>PubnubCore\LoggingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PubNubMessaging.Core.PubnubMessageSource" Collapsed="true">
+    <Position X="12.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQ=</HashCode>
+      <FileName>PubnubCore\LoggingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PubNubMessaging.Core.PubnubErrorCode" Collapsed="true">
+    <Position X="9" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAUrkCEYQoBUFEggAQDMEAQA6NGuAMAAABQCCBEAIJQ=</HashCode>
+      <FileName>PubnubCore\LoggingMethod.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PubNubMessaging.Core.ResponseType" Collapsed="true">
+    <Position X="16" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAkBAAgAMCGAAEAwABAAAAECgBoBQAFCoCAAAQA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PubNubMessaging.Core.PushTypeService" Collapsed="true">
+    <Position X="14.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEQAAAAAAAAAAAgAAAAAAAAEAAAA=</HashCode>
+      <FileName>PubnubCore\PubnubCore.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -9,6 +9,13 @@
 
 ##### Явор Комитов [[telerik]](http://telerikacademy.com/Users/ykomitov) [[github]](https://github.com/ykomitov)
 
+**Dating web application**
+
+    -   Users can create profiles
+	-   Users can have a profile picture
+    -   Users can create friendships
+	-	Users can send messages to each other
+    -   Users receive notifications when another user sends them a message
 
 Web Services and Cloud Technologies – Practical Teamwork Project 2015
 =====================================================================
