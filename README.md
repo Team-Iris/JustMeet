@@ -9,6 +9,8 @@
 
 ##### Явор Комитов [[telerik]](http://telerikacademy.com/Users/ykomitov) [[github]](https://github.com/ykomitov)
 
+[[Link to the application]](http://http://just-meet-client.azurewebsites.net)
+
 **Dating web application**
 
     -   Users can create profiles
@@ -17,7 +19,6 @@
 	-	Users can send messages to each other
     -   Users receive notifications when another user sends them a message
 	
-	[[Link to the application]](http://http://just-meet-client.azurewebsites.net)
 
 Web Services and Cloud Technologies – Practical Teamwork Project 2015
 =====================================================================
